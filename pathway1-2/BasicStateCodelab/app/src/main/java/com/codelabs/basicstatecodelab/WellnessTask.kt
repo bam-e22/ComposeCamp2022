@@ -6,8 +6,9 @@ import androidx.compose.runtime.setValue
 
 class WellnessTask(
     val id: Int,
-    val label: String,
+    initialLabel: String,
     initialChecked: Boolean = false
 ) {
+    var label by mutableStateOf(initialLabel)
     var checked by mutableStateOf(initialChecked)
 }
